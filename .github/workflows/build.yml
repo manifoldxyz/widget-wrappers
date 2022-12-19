@@ -1,0 +1,67 @@
+name: Build
+on:
+  workflow_dispatch: {}
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+jobs:
+  react:
+    working-directory: packages/@manifoldxyz-react
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: |
+            echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+            yarn install
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Lint
+        run: yarn lint
+
+      # - name: Unit Test
+      #   run: yarn test:unit:coverage
+
+      - name: Build
+        run: yarn build
+  vue:
+    working-directory: packages/@manifoldxyz-vue
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: |
+            echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+            yarn install
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Lint
+      #   run: yarn lint
+
+      # - name: Unit Test
+      #   run: yarn test:unit:coverage
+
+      # - name: Build
+      #   run: yarn build
+
+

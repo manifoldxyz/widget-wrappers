@@ -1,0 +1,7 @@
+{
+  "connect": {
+    "version": "2.0.19",
+    "scriptID": "manifold-connect-script",
+    "cssID": "manifold-connect-css"
+  }
+}
