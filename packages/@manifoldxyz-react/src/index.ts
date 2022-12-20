@@ -1,2 +1,2 @@
 export { ConnectWidget } from './ConnectWidget';
-export * from './types';
+export * from './shared/types';

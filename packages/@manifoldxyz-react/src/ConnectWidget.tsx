@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { ConnectProps } from './types';
-import widgetConfig from './widget-config.json';
+import widgetConfig from './shared/config.json';
+import { ConnectProps } from './shared/types';
 
 export const ConnectWidget: React.FC<ConnectProps> = (props) => {
   useConnect();

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+     "jsx": "react",
+     "baseUrl": "./packages",
+     "paths": {
+        "shared": ["shared/*"],
+     }
+   }
+}
