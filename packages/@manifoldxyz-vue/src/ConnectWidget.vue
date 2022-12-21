@@ -5,7 +5,7 @@ import { camelCaseToHyphenCase, loadConnectWidget } from './shared/utils';
 
 // Can't use defineProps directly imported from another file. Vue is.. interesting.
 // https://github.com/vuejs/core/issues/4294
-type Props = ConnectProps;
+interface Props extends ConnectProps {}
 
 const props = defineProps<Props>();
 
