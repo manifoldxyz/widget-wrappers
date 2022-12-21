@@ -11,4 +11,11 @@ Each framework has it's own package and completely controls its own build. The a
 - packages
   - @manifoldxyz-react
   - @manifoldxyz-vue
+- shared
+  utils.ts
 ```
+
+The `shared` directory is symlinked to the `src` folder of each package.
+
+## Modify a package
+Change something in the package, then change the version number in package.json. Make a Pull Request and once merged in the new version in package.json will be published.
