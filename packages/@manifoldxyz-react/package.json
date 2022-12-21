@@ -1,6 +1,6 @@
 {
   "name": "@manifoldxyz/react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "license": "MIT",
@@ -9,6 +9,11 @@
     "lint": "eslint src --ext .ts,.tsx",
     "symlink-shared": "rimraf ./shared && symlink-dir ../../shared ./src/shared"
   },
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md"
+  ],
   "devDependencies": {
     "@manifoldxyz/lint-configs": "^0.0.15",
     "@rollup/plugin-commonjs": "^24.0.0",
