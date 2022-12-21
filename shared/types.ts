@@ -20,7 +20,7 @@ export type ConnectProps = {
   parentFrameURL?: string;
   autoReconnect?: boolean;
   overrideConnectText?: string;
-  striuctAuth?: boolean;
+  strictAuth?: boolean;
   delayAuth?: boolean;
   clientId: string;
   appName: string;

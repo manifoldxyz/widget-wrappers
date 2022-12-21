@@ -5,8 +5,9 @@
   "module": "dist/esm/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf ./dist && rimraf ./shared && symlink-dir ../../shared ./src/shared && rollup -c --preserveSymlinks",
-    "lint": "eslint src --ext .ts,.tsx"
+    "build": "rimraf ./dist && yarn run symlink-shared && rollup -c --preserveSymlinks",
+    "lint": "eslint src --ext .ts,.tsx",
+    "symlink-shared": "rimraf ./shared && symlink-dir ../../shared ./src/shared"
   },
   "devDependencies": {
     "@manifoldxyz/lint-configs": "^0.0.15",
@@ -27,12 +28,10 @@
     "prettier": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rimraf": "^3.0.2",
     "rollup": "^3.7.5",
     "rollup-plugin-dts": "^5.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
-    "symlink-dir": "^5.1.0",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {

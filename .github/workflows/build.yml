@@ -29,4 +29,15 @@ jobs:
         run: yarn workspaces run lint
       - name: Build
         run: yarn workspaces run build
-  
+      - name: publish-react
+        if: ${{ success() && github.event_name != 'pull_request' }}
+        working-directory: ./packages/@manifoldxyz-react
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      - name: publish-vue
+        if: ${{ success() && github.event_name != 'pull_request' }}
+        working-directory: ./packages/@manifoldxyz-vue
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}

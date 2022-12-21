@@ -1,6 +1,11 @@
 {
+  "name": "manifold-widget-wrappers",
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "rimraf": "^3.0.2",
+    "symlink-dir": "^5.1.0"
+  }
 }
