@@ -5,7 +5,7 @@ import { camelCaseToHyphenCase, loadConnectWidget } from './shared/utils';
 
 // Can't use defineProps directly imported from another file. Vue is.. interesting.
 // https://github.com/vuejs/core/issues/4294
-interface Props extends ConnectProps { }
+type Props = ConnectProps;
 
 const props = defineProps<Props>();
 
@@ -20,9 +20,6 @@ const propsAsDataAttributes = computed(() => {
 onMounted(() => {
   loadConnectWidget();
 });
-
-
-
 </script>
 <template>
   <div data-widget="m-connect" v-bind="propsAsDataAttributes"></div>
