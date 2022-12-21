@@ -39,5 +39,5 @@ jobs:
         if: ${{ success() && github.event_name != 'pull_request' }}
         uses: JS-DevTools/npm-publish@v1
         with:
-        package: ./packages/@manifoldxyz-vue/package.json
+          package: ./packages/@manifoldxyz-vue/package.json
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
