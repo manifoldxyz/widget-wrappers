@@ -4,6 +4,11 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "license": "MIT",
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md"
+  ],
   "scripts": {
     "lint": "eslint src --ext .ts,.vue",
     "build": "rimraf ./dist && yarn run symlink-shared && rollup -c --preserveSymlinks",

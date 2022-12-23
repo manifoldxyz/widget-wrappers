@@ -1,7 +1,12 @@
 {
   "connect": {
-    "version": "2.0.19",
-    "scriptID": "manifold-connect-script",
-    "cssID": "manifold-connect-css"
+    "defaultVersion": "2.0.19",
+    "javascriptSrc": "https://connect.manifoldxyz.dev/{{VERSION}}/connect.umd.min.js",
+    "cssSrc": "https://connect.manifoldxyz.dev/{{VERSION}}/connect.css"
+  },
+  "marketplace": {
+    "defaultVersion": "3.0.4",
+    "javascriptSrc": "https://marketplace.manifoldxyz.dev/{{VERSION}}/marketplace.umd.min.js",
+    "cssSrc": "https://marketplace.manifoldxyz.dev/{{VERSION}}/marketplace.css"
   }
 }

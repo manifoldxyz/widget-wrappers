@@ -11,6 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "jsx": "preserve",
   },
   // "include": ["src/**/*.ts", "src/**/*.vue"],
   "exclude": [

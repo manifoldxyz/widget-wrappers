@@ -1,20 +1,30 @@
 import widgetConfig from './config.json';
 
-export const loadConnectWidget = (): void => {
-  if (!document.getElementById(widgetConfig.connect.scriptID)) {
+
+export const loadWidget = (widgetType: keyof typeof widgetConfig, version?: string) => {
+  const { javascriptSrc, cssSrc, defaultVersion } = widgetConfig[widgetType]
+
+  loadScript(javascriptSrc.replace('{{VERSION}}', version || defaultVersion), `manifold-${widgetType}-script`)
+  loadCSS(cssSrc.replace('{{VERSION}}', version || defaultVersion), `manifold-${widgetType}-css`)
+}
+
+export const loadScript = (src: string, id: string): void => {
+  if (!document.getElementById(id)) {
     const script = document.createElement('script');
-    script.src = `https://connect.manifoldxyz.dev/${widgetConfig.connect.version}/connect.umd.min.js`;
-    script.id = widgetConfig.connect.scriptID;
+    script.src = src
+    script.id = id;
     document.body.appendChild(script);
   }
+};
 
-  if (!document.getElementById(widgetConfig.connect.cssID)) {
+export const loadCSS = (src: string, id: string): void => {
+  if (!document.getElementById(id)) {
     const head = document.getElementsByTagName('head')[0];
     const link = document.createElement('link');
-    link.id = widgetConfig.connect.cssID;
+    link.id = id
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = `https://connect.manifoldxyz.dev/${widgetConfig.connect.version}/connect.css`;
+    link.href =  src
     head.appendChild(link);
   }
 };

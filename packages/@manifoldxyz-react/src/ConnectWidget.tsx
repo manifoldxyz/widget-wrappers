@@ -1,27 +1,16 @@
 import React, { useEffect } from 'react';
-import { ConnectProps } from './shared/types';
-import { camelCaseToHyphenCase, loadConnectWidget } from './shared/utils';
+import { ConnectWidgetDataAttributes } from './shared/types';
+import {Widget} from './Widget'
 
-export const ConnectWidget: React.FC<ConnectProps> = (props) => {
-  useConnect();
-
-  const propsAsDataAttributes = Object.keys(props).reduce((acc: { [key: string]: any }, key) => {
-    // @ts-ignore
-    acc[`data-${camelCaseToHyphenCase(key)}`] = props[key];
-    return acc;
-  }, {});
-
+export const ConnectWidget: React.FC<{ version?: string } & ConnectWidgetDataAttributes> = ({ version, ...props }) => {
   return (
-    <div
-      {...propsAsDataAttributes}
-      data-widget="m-connect"
-      dangerouslySetInnerHTML={{ __html: '' }}
-    ></div>
+    <Widget
+      widgetType="connect"
+      version={version}
+      dataAttributes={{
+        ...props,
+        widget: 'm-connect'
+      }}
+    ></Widget>
   );
-};
-
-const useConnect = () => {
-  return useEffect(() => {
-    loadConnectWidget();
-  }, []);
 };
