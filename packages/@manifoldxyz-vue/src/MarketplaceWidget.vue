@@ -9,7 +9,8 @@ interface Props extends MarketplaceWidgetDataAttributes {
 const props = defineProps<Props>();
 const dataAttributes = computed(() => {
   const { version, ...rest } = props;
-  return rest;
+
+  return { ...rest, version: 1 };
 });
 </script>
 <template>

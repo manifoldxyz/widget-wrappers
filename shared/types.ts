@@ -60,7 +60,6 @@ export type MarketplaceWidgetDataAttributes = {
   /** listing's custodial contract address */
   address?: string;
   network: EthereumNetwork;
-  version: number;
   /** server-side id for overrides */
   assetIdOverride?: string;
   fallbackProvider?: string;
