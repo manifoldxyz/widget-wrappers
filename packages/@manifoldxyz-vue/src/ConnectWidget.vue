@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { computed } from 'vue';
+import { ConnectWidgetDataAttributes } from './shared/types';
 import Widget from './Widget.vue';
-import { ConnectWidgetDataAttributes } from './shared/types'
 
 interface Props extends ConnectWidgetDataAttributes {
-  version?: string,
+  version?: string;
 }
-
-const { version, ...props} = defineProps<Props>();
-
-const dataAttributes = {
-  ...props,
-  widget: "m-connect"
-}
+const props = defineProps<Props>();
+const dataAttributes = computed(() => {
+  return {
+    ...props,
+    widget: 'm-connect',
+  };
+});
 </script>
 <template>
-  <Widget :version="version" :dataAttributes="dataAttributes"></Widget>
+  <Widget :version="props.version" :data-attributes="dataAttributes"></Widget>
 </template>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
+import { WidgetType } from './shared/types';
 import { camelCaseToHyphenCase, loadWidget } from './shared/utils';
-import { WidgetType } from './shared/types'
 
 interface Props {
-  widgetType: WidgetType,
-  dataAttributes: {[key: string]: any}
-  version?: string,
+  widgetType: WidgetType;
+  dataAttributes: { [key: string]: any };
+  version?: string;
 }
 
 const props = defineProps<Props>();

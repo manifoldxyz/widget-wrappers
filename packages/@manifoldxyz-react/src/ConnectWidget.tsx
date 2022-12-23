@@ -1,15 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ConnectWidgetDataAttributes } from './shared/types';
-import {Widget} from './Widget'
+import { Widget } from './Widget';
 
-export const ConnectWidget: React.FC<{ version?: string } & ConnectWidgetDataAttributes> = ({ version, ...props }) => {
+export const ConnectWidget: React.FC<{ version?: string } & ConnectWidgetDataAttributes> = ({
+  version,
+  ...props
+}) => {
   return (
     <Widget
       widgetType="connect"
       version={version}
       dataAttributes={{
         ...props,
-        widget: 'm-connect'
+        widget: 'm-connect',
       }}
     ></Widget>
   );

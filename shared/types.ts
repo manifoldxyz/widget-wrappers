@@ -1,4 +1,4 @@
-import type widgetConfig from './config.json'
+import type widgetConfig from './config.json';
 
 export enum EthereumNetwork {
   MAINNET = 1,
@@ -31,26 +31,27 @@ export type ConnectWidgetDataAttributes = {
   message?: string;
 };
 
-
-export type MarketplaceWidgetType = 'm-listing-attributes' |'m-listing-bids' |
-'m-card-catalog' |
-'m-layout-complete-listing' |
-'m-layout-bid-overlay' |
-'m-listing-countdown' |
-'m-card-countdown' |
-'m-card-ad' |
-'m-listing-description' |
-'m-layout-details-display' |
-'m-listing-image-expandable' |
-'m-listing-bid-form' |
-'m-bid-subscribe-popup' |
-'m-listing-inventory' |
-'m-listing-links' |
-'m-listing-minted-counter' |
-'m-listing-name' |
-'m-listing-price' |
-'m-listing-bid-form-rich' |
-'m-scheme-toggle';
+export type MarketplaceWidgetType =
+  | 'm-listing-attributes'
+  | 'm-listing-bids'
+  | 'm-card-catalog'
+  | 'm-layout-complete-listing'
+  | 'm-layout-bid-overlay'
+  | 'm-listing-countdown'
+  | 'm-card-countdown'
+  | 'm-card-ad'
+  | 'm-listing-description'
+  | 'm-layout-details-display'
+  | 'm-listing-image-expandable'
+  | 'm-listing-bid-form'
+  | 'm-bid-subscribe-popup'
+  | 'm-listing-inventory'
+  | 'm-listing-links'
+  | 'm-listing-minted-counter'
+  | 'm-listing-name'
+  | 'm-listing-price'
+  | 'm-listing-bid-form-rich'
+  | 'm-scheme-toggle';
 
 export type MarketplaceWidgetDataAttributes = {
   widget: MarketplaceWidgetType;
@@ -59,7 +60,7 @@ export type MarketplaceWidgetDataAttributes = {
   /** listing's custodial contract address */
   address?: string;
   network: EthereumNetwork;
-  version: number
+  version: number;
   /** server-side id for overrides */
   assetIdOverride?: string;
   fallbackProvider?: string;
@@ -98,7 +99,7 @@ export const MMarketplaceOptions = {
   },
   network: {
     type: Number,
-    default: EthereumNetwork.MAINNET
+    default: EthereumNetwork.MAINNET,
   },
   version: {
     type: Number,
@@ -125,9 +126,9 @@ export const MMarketplaceOptions = {
     default: '',
   },
   allowListFileNoValues: {
-  type: String,
-  required: false,
-  default: '',
+    type: String,
+    required: false,
+    default: '',
   },
   referralAddress: {
     type: String,
@@ -188,8 +189,6 @@ export const MMarketplaceOptions = {
     type: Boolean,
     default: false,
   },
-} as const
+} as const;
 
-
-export type WidgetType = keyof typeof widgetConfig
-
+export type WidgetType = keyof typeof widgetConfig;

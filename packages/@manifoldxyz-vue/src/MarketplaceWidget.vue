@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { computed } from 'vue';
+import { MarketplaceWidgetDataAttributes } from './shared/types';
 import Widget from './Widget.vue';
-import { MarketplaceWidgetDataAttributes } from './shared/types'
 
 interface Props extends MarketplaceWidgetDataAttributes {
-  version?: string,
+  version?: string;
 }
-
-const { version, ...dataAttributes} = defineProps<Props>();
+const props = defineProps<Props>();
+const dataAttributes = computed(() => {
+  const { version, ...rest } = props;
+  return rest;
+});
 </script>
 <template>
-  <Widget :version="version" :dataAttributes="dataAttributes"></Widget>
+  <Widget :version="props.version" :data-attributes="dataAttributes"></Widget>
 </template>
- 
