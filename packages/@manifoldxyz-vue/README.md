@@ -1,13 +1,13 @@
-# `@manifoldxyz/react`
+# `@manifoldxyz/vue`
 
-Manifold widgets consumable directly in React. 
+Manifold widgets consumable directly in Vue. 
 
 ## Installation
-`yarn add @manifoldxyz/react`
+`yarn add @manifoldxyz/vue`
 
 ## Usage
 ```tsx
-  import {ConnectWidget, EthereumNetwork} from '@manifoldxyz/react'
+  import {ConnectWidget, EthereumNetwork} from '@manifoldxyz/vue'
 
   // somewhere in your app
   <ConnectWidget version="2.0.19" clientId="my-client-id" appName="my-app-name" network={EthereumNetwork.MAINNET} />
