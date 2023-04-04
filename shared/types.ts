@@ -10,8 +10,20 @@ export enum EthereumNetwork {
   MUMBAI = 80001,
 }
 
+export enum DelayAuth {
+    false = 'false',
+    true = 'true',
+    always = 'always'
+}
+
+export enum OAuthGrantType {
+    TOKEN = 'token',
+    SIGNATURE = 'signature',
+}
+
 export type ConnectWidgetDataAttributes = {
   showBalance?: boolean;
+  alwaysOpen: boolean;
   connectWalletImage?: string;
   showChain?: boolean;
   avatar?: string;
@@ -23,17 +35,16 @@ export type ConnectWidgetDataAttributes = {
   autoReconnect?: boolean;
   overrideConnectText?: string;
   strictAuth?: boolean;
-  delayAuth?: boolean;
+  delayAuth?: DelayAuth;
   clientId: string;
   appName: string;
-  grantType?: string;
+  grantType?: OAuthGrantType;
   detectApp?: boolean;
   message?: string;
 };
 
 export type MarketplaceWidgetType =
   | 'm-listing-attributes'
-  | 'm-listing-bids'
   | 'm-card-catalog'
   | 'm-layout-complete-listing'
   | 'm-layout-bid-overlay'
@@ -51,12 +62,14 @@ export type MarketplaceWidgetType =
   | 'm-listing-name'
   | 'm-listing-price'
   | 'm-listing-bid-form-rich'
-  | 'm-scheme-toggle';
+  | 'm-scheme-toggle'
+    'm-listing-interactions';
 
 export type MarketplaceWidgetDataAttributes = {
   widget: MarketplaceWidgetType;
   /** listing id */
   id: string;
+  version: number;
   /** listing's custodial contract address */
   address?: string;
   network: EthereumNetwork;
@@ -73,6 +86,7 @@ export type MarketplaceWidgetDataAttributes = {
   currentBidTextOverride?: string;
   winningBidTextOverride?: string;
   identityVerifierMessageOverride: string;
+  viewLinkPlatform: string;
   /**
    * (optional) identifier for the widget that replaces a `data-widget` div.
    * a widget that has its widgetKey set emits the MARKETPLACE_WIDGET_INJECTED
@@ -159,6 +173,11 @@ export const MMarketplaceOptions = {
     type: String,
     required: false,
     default: '',
+  },
+  viewLinkPlatform: {
+    type: String,
+    required: false,
+    default: "opensea",
   },
   // Props for error message overrides
   identityVerifierMessageOverride: {

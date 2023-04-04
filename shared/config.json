@@ -1,11 +1,11 @@
 {
   "connect": {
-    "defaultVersion": "2.0.19",
+    "defaultVersion": "2.2.2",
     "javascriptSrc": "https://connect.manifoldxyz.dev/{{VERSION}}/connect.umd.min.js",
     "cssSrc": "https://connect.manifoldxyz.dev/{{VERSION}}/connect.css"
   },
   "marketplace": {
-    "defaultVersion": "3.0.4",
+    "defaultVersion": "3.3.4",
     "javascriptSrc": "https://marketplace.manifoldxyz.dev/{{VERSION}}/marketplace.umd.min.js",
     "cssSrc": "https://marketplace.manifoldxyz.dev/{{VERSION}}/marketplace.css"
   }

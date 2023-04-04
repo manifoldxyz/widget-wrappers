@@ -1,6 +1,6 @@
 # `@manifoldxyz/react`
 
-Manifold widgets consumable directly in React. 
+Manifold widgets consumable directly in React.
 
 ## Installation
 `yarn add @manifoldxyz/react`
@@ -10,7 +10,7 @@ Manifold widgets consumable directly in React.
   import {ConnectWidget, EthereumNetwork} from '@manifoldxyz/react'
 
   // somewhere in your app
-  <ConnectWidget version="2.0.19" clientId="my-client-id" appName="my-app-name" network={EthereumNetwork.MAINNET} />
+  <ConnectWidget version="2.2.2" clientId="my-client-id" appName="my-app-name" network={EthereumNetwork.MAINNET} />
 ```
 
 ## Styles
