@@ -62,8 +62,8 @@ export type MarketplaceWidgetType =
   | 'm-listing-name'
   | 'm-listing-price'
   | 'm-listing-bid-form-rich'
-  | 'm-scheme-toggle';
-('m-listing-interactions');
+  | 'm-scheme-toggle'
+  | 'm-listing-interactions';
 
 export type MarketplaceWidgetDataAttributes = {
   widget: MarketplaceWidgetType;
