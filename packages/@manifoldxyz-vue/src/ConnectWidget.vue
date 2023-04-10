@@ -4,7 +4,7 @@ import { ConnectWidgetDataAttributes } from './shared/types';
 import Widget from './Widget.vue';
 
 interface Props extends ConnectWidgetDataAttributes {
-  version?: string;
+  version: string;
 }
 const props = defineProps<Props>();
 const dataAttributes = computed(() => {
