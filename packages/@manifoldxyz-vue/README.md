@@ -1,6 +1,6 @@
 # `@manifoldxyz/vue`
 
-Manifold widgets consumable directly in Vue. 
+Manifold widgets consumable directly in Vue.
 
 ## Installation
 `yarn add @manifoldxyz/vue`
@@ -10,7 +10,7 @@ Manifold widgets consumable directly in Vue.
   import {ConnectWidget, EthereumNetwork} from '@manifoldxyz/vue'
 
   // somewhere in your app
-  <ConnectWidget version="2.0.19" clientId="my-client-id" appName="my-app-name" network={EthereumNetwork.MAINNET} />
+  <ConnectWidget version="2.2.2" clientId="my-client-id" appName="my-app-name" network={EthereumNetwork.MAINNET} />
 ```
 
 ## Styles
