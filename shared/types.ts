@@ -209,4 +209,57 @@ export const MMarketplaceOptions = {
   },
 } as const;
 
+export type CurationWidgetDataAttributes = {
+  fallbackProvider: string;
+  network: number;
+  parentFrameUrl: string;
+  clientId: string;
+  appName: string;
+  grantType: string;
+  detectApp: boolean;
+  curationId: string;
+  appearance: string;
+  curatorAddress: string;
+};
+
+export const MCurationOptions = {
+  fallbackProvider: {
+    type: String,
+  },
+  network: {
+    type: Number,
+  },
+  parentFrameUrl: {
+    type: String,
+  },
+  clientId: {
+    type: String,
+    default: '',
+  },
+  appName: {
+    type: String,
+    default: '',
+  },
+  grantType: {
+    type: String,
+    default: OAuthGrantType.SIGNATURE,
+  },
+  detectApp: {
+    type: Boolean,
+    default: false,
+  },
+  curationId: {
+    type: String,
+    required: true,
+  },
+  appearance: {
+    type: String,
+    default: 'system',
+  },
+  curatorAddress: {
+    type: String,
+    required: true,
+  },
+};
+
 export type WidgetType = keyof typeof widgetConfig;

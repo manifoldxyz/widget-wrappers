@@ -1,18 +1,17 @@
 import React from 'react';
-import { ConnectWidgetDataAttributes } from './shared/types';
+import { CurationWidgetDataAttributes } from './shared/types';
 import { Widget } from './Widget';
 
-export const ConnectWidget: React.FC<{ version: string } & ConnectWidgetDataAttributes> = ({
+export const CurationWidget: React.FC<{ version?: string } & CurationWidgetDataAttributes> = ({
   version,
   ...props
 }) => {
   return (
     <Widget
-      widgetType="connect"
+      widgetType="curation"
       version={version}
       dataAttributes={{
         ...props,
-        widget: 'm-connect',
       }}
     ></Widget>
   );
