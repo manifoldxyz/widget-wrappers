@@ -11,14 +11,14 @@ export enum EthereumNetwork {
 }
 
 export enum DelayAuth {
-    false = 'false',
-    true = 'true',
-    always = 'always'
+  false = 'false',
+  true = 'true',
+  always = 'always',
 }
 
 export enum OAuthGrantType {
-    TOKEN = 'token',
-    SIGNATURE = 'signature',
+  TOKEN = 'token',
+  SIGNATURE = 'signature',
 }
 
 export type ConnectWidgetDataAttributes = {
@@ -62,8 +62,8 @@ export type MarketplaceWidgetType =
   | 'm-listing-name'
   | 'm-listing-price'
   | 'm-listing-bid-form-rich'
-  | 'm-scheme-toggle'
-    'm-listing-interactions';
+  | 'm-scheme-toggle';
+('m-listing-interactions');
 
 export type MarketplaceWidgetDataAttributes = {
   widget: MarketplaceWidgetType;
@@ -177,7 +177,7 @@ export const MMarketplaceOptions = {
   viewLinkPlatform: {
     type: String,
     required: false,
-    default: "opensea",
+    default: 'opensea',
   },
   // Props for error message overrides
   identityVerifierMessageOverride: {
