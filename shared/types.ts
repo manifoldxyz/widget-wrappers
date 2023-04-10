@@ -69,7 +69,7 @@ export type MarketplaceWidgetDataAttributes = {
   widget: MarketplaceWidgetType;
   /** listing id */
   id: string;
-  version: number;
+  version: string;
   /** listing's custodial contract address */
   address?: string;
   network: EthereumNetwork;
