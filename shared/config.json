@@ -8,5 +8,10 @@
     "defaultVersion": "3.3.4",
     "javascriptSrc": "https://marketplace.manifoldxyz.dev/{{VERSION}}/marketplace.umd.min.js",
     "cssSrc": "https://marketplace.manifoldxyz.dev/{{VERSION}}/marketplace.css"
+  },
+  "curation": {
+    "defaultVersion": "0.0.3",
+    "javascriptSrc": "https://curation.manifoldxyz.dev/{{VERSION}}/curation.umd.min.js",
+    "cssSrc": "https://curation.manifoldxyz.dev/{{VERSION}}/curation.css"
   }
 }
