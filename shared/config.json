@@ -13,5 +13,10 @@
     "defaultVersion": "0.0.3",
     "javascriptSrc": "https://curation.manifoldxyz.dev/{{VERSION}}/curation.umd.min.js",
     "cssSrc": "https://curation.manifoldxyz.dev/{{VERSION}}/curation.css"
+  },
+  "restrictedToken": {
+    "defaultVersion": "0.1.0",
+    "javascriptSrc": "https://restrictedtoken.manifoldxyz.dev/{{VERSION}}/restrictedtoken.umd.min.js",
+    "cssSrc": "https://restrictedtoken.manifoldxyz.dev/{{VERSION}}/restrictedtoken.css"
   }
 }
