@@ -11,7 +11,6 @@ export const RestrictedTokenWidget: React.FC<
       version={version}
       dataAttributes={{
         ...props,
-        widget: 'm-restricted-token',
       }}
     ></Widget>
   );
