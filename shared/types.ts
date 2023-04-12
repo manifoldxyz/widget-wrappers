@@ -263,9 +263,7 @@ export const MCurationOptions = {
 };
 
 export type RestrictedTokenWidgetDataAttributes = {
-  componentNamePascal: string;
-  constructor: any;
-  dataWidget: string;
+  address: string;
 };
 
 export type WidgetType = keyof typeof widgetConfig;
