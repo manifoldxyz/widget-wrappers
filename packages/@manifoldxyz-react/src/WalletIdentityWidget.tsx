@@ -11,6 +11,7 @@ export const WalletIdentityWidget: React.FC<
       version={version}
       dataAttributes={{
         ...props,
+        widget: 'm-wallet-identity',
       }}
     ></Widget>
   );

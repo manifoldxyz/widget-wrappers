@@ -12,6 +12,7 @@ export const CurationWidget: React.FC<{ version?: string } & CurationWidgetDataA
       version={version}
       dataAttributes={{
         ...props,
+        widget: 'm-curation',
       }}
     ></Widget>
   );

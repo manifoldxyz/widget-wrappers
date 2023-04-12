@@ -10,7 +10,7 @@ const props = defineProps<Props>();
 const dataAttributes = computed(() => {
   const { version, ...rest } = props;
 
-  return { ...rest };
+  return { ...rest, widget: 'm-curation', };
 });
 </script>
 <template>
