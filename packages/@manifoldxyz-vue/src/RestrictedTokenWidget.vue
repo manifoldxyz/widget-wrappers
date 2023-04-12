@@ -10,6 +10,7 @@ const props = defineProps<Props>();
 const dataAttributes = computed(() => {
   return {
     ...props,
+    widget: 'm-restricted-token',
   };
 });
 </script>
