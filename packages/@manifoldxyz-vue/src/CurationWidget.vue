@@ -8,9 +8,10 @@ interface Props extends CurationWidgetDataAttributes {
 }
 const props = defineProps<Props>();
 const dataAttributes = computed(() => {
-  const { version, ...rest } = props;
-
-  return { ...rest, widget: 'm-curation', };
+  return {
+    ...props,
+    widget: 'm-curation',
+  };
 });
 </script>
 <template>
