@@ -11,8 +11,7 @@ export const Widget: React.FC<{
 
   const dataAttributesHyphenated = Object.keys(dataAttributes).reduce(
     (acc: { [key: string]: any }, key) => {
-      // @ts-ignore
-      acc[`data-${camelCaseToHyphenCase(key)}`] = props[key];
+      acc[`data-${camelCaseToHyphenCase(key)}`] = dataAttributes[key];
       return acc;
     },
     {}
