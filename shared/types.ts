@@ -262,4 +262,8 @@ export const MCurationOptions = {
   },
 };
 
+export type RestrictedTokenWidgetDataAttributes = {
+  address: string;
+};
+
 export type WidgetType = keyof typeof widgetConfig;
